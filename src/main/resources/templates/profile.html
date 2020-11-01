@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Calculator</title>
+
+    <title>Фон</title>
+    <style>
+        body {
+            background: #c7b39b url(https://i.pinimg.com/originals/33/44/ff/3344ff95e12dbb03218fbb1fe06ad039.jpg); /* Цвет фона и путь к файлу */
+            color: #fff; /* Цвет текста */
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/news}">GooooooodNews</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/profile}">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div>
+        <h1 align="left">
+            Привет, <span th:text="${user.login}"></span>
+            <small class="text-muted">это страничка твоего профиля</small>
+        </h1>
+    </div>
+
+    <h4>Немного информации о тебе</h4>
+    <table class="user-info">
+        <tr>
+            <td>Логин:</td>
+            <td class="info">Test</td>
+        </tr>
+        <tr>
+            <td>Имя:</td>
+            <td class="info">Test</td>
+        </tr>
+        <tr>
+            <td>Возраст:</td>
+            <td class="info">Test</td>
+        </tr>
+    </table>
+
+</main>
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

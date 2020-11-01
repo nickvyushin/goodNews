@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Фон</title>
+    <style>
+        body {
+            background: #c7b39b url(https://images.unsplash.com/photo-1538599329336-7b48379cbbcd?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=60); /* Цвет фона и путь к файлу */
+            color: #fff; /* Цвет текста */
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+</head>
+
+<body>
+<main role="main" class="container">
+
+    <div class="form">
+        <h1>GooooooodNews®</h1>
+    </div>
+
+    <div class="form_background">
+        <h2 class="form">
+            Авторизуйтесь
+        </h2>
+        <h3 class="form">
+            чтобы продолжить просмотр новостей
+        </h3>
+
+        <form class="form" th:action="@{/login}" th:object="${form}" method="post">
+            <input class="inputs" type="text" placeholder="Логин" aria-label="Username" name="login"
+                   th:field="*{login}"/>
+            <input class="inputs" type="password" placeholder="Пароль" aria-label="Password" name="password"
+                   th:field="*{password}"/>
+            <input class="buttons" type="submit"/>
+        </form>
+
+        <p class="form">
+            Или <a th:href="@{registration}">зарегистрируйтесь</a>
+        </p>
+
+    </div>
+
+    <div class="error" th:if="${error}">Вы ввели неверный логин/пароль</div>
+
+</main>
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

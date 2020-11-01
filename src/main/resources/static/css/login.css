@@ -1,0 +1,49 @@
+body {
+    padding-top: 15rem;
+}
+
+.login{
+    padding: 3rem 1.5rem;
+    text-align: left;
+}
+.form{
+    position: relative;
+    top: 75px; /* This will move it 20px up */
+    left: 20px; /* This will move it 20px to the right */
+}
+.buttons{
+    border-radius: 0.3rem;
+    background: #008B8B;
+    width: 7rem;
+}
+.inputs{
+    border-radius: 0.3rem;
+    width: 12.5rem;
+}
+.form_background{
+    width: 35rem;
+    height: 15rem;
+    border-radius: 2rem;
+    background-color: rgba(176,176,176, 0.8);
+}
+.error{
+    color: crimson;
+    font-weight: bolder;
+}
+h1{
+    text-align: left;
+    color:#585858;
+}
+h2{
+    text-align: left;
+    color:#008B8B;
+}
+
+h3{
+    text-align: left;
+    color:#484848;
+}
+h4{
+    text-align: left;
+    color:#484848;
+}

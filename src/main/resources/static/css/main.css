@@ -1,0 +1,27 @@
+body {
+    padding-top: 1rem;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.user-info{
+    color: teal;
+    font-weight: bolder;
+}
+.info{
+    position: relative;
+    left: 20px;
+}
+
+
+h1{
+    color:#008B8B;
+}
+
+h2{
+    color:#008080;
+}
+h4{
+    color: gray;
+}
