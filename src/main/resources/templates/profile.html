@@ -21,7 +21,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" th:href="@{/news}">GooooooodNews</a>
+    <a class="navbar-brand" th:href="@{/news-page}">GooooooodNews</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/profile}">Профиль</a>
+                <a class="nav-link" th:href="@{/login}">Профиль</a>
             </li>
         </ul>
     </div>
@@ -39,7 +39,7 @@
 
     <div>
         <h1 align="left">
-            Привет, <span th:text="${user.login}"></span>
+            Привет, <span th:text="${login}"></span>
             <small class="text-muted">это страничка твоего профиля</small>
         </h1>
     </div>
@@ -48,15 +48,15 @@
     <table class="user-info">
         <tr>
             <td>Логин:</td>
-            <td class="info">Test</td>
-        </tr>
-        <tr>
-            <td>Имя:</td>
-            <td class="info">Test</td>
+            <td class="info">
+                <span th:text="${login}"></span>
+            </td>
         </tr>
         <tr>
             <td>Возраст:</td>
-            <td class="info">Test</td>
+            <td class="info">
+                пока не могу вывести...
+            </td>
         </tr>
     </table>
 
