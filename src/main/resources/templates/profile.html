@@ -39,7 +39,7 @@
 
     <div>
         <h1 align="left">
-            Привет, <span th:text="${login}"></span>
+            Привет, <span th:text="${fullName}">, </span>
             <small class="text-muted">это страничка твоего профиля</small>
         </h1>
     </div>
@@ -55,7 +55,7 @@
         <tr>
             <td>Возраст:</td>
             <td class="info">
-                пока не могу вывести...
+                <span th:text="${age}"></span>
             </td>
         </tr>
     </table>

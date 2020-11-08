@@ -25,13 +25,21 @@
 
     <div class="form_background">
         <h2 class="form">
-            Извините
+            Введите данные для регистрации
         </h2>
-        <h3 class="form">
-            но пока регистрация не работает
-        </h3>
+    <form class="form" th:action="@{/registration}" th:object="${form}" method="post">
+        <input class="inputs" type="text" placeholder="Имя и Фамилия" name="fullName"
+               th:field="*{fullName}">
+        <input class="inputs" type="text" placeholder="Возраст" name="age"
+               th:field="*{age}">
+        <input class="inputs" type="text" placeholder="Логин" aria-label="Username" name="login"
+               th:field="*{login}"/>
+        <input class="inputs" type="password" placeholder="Пароль" aria-label="Password" name="password"
+               th:field="*{password}"/>
+        <input class="buttons" type="submit"/>
+    </form>
 
-    </div>
+        <div class="error" th:if="${error}">Такой пользователь уже существует!</div>
 
 </main>
 

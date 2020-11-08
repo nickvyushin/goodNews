@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ProfileController {
 
-    @GetMapping("/profile/{login}")
-    public String blogPage(Model model, @PathVariable("login")String login, @RequestParam("password")String password) {
+    @GetMapping("/profile/{login}/{fullName}/{age}")
+    public String profile(Model model, @PathVariable("login")String login, @RequestParam("password")String password, @PathVariable("fullName")String fullName, @PathVariable("age")Integer age) {
         model.addAttribute("request", new LoginForm(login, password));
         return "profile";
     }
+
 }

@@ -1,13 +1,13 @@
-package com.aggregator.goodNews.model;
+package com.aggregator.goodNews.dto;
 
 import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
+@Getter
 @ToString(exclude = "password")
-public class User {
+public class RegForm {
 
     private String fullName;
     private Integer age;
